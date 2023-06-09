@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "IITM Seek Helper",
+  "description": "Extension to perform convenient modifications",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://seek.onlinedegree.iitm.ac.in/*"
+      ],
+      "js": [
+        "overflow-y.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "favicon.png"
+  }
+}
