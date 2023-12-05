@@ -5,12 +5,8 @@
   "version": "1.0",
   "content_scripts": [
     {
-      "matches": [
-        "https://seek.onlinedegree.iitm.ac.in/*"
-      ],
-      "js": [
-        "overflow-y.js"
-      ],
+      "matches": ["https://seek.onlinedegree.iitm.ac.in/*"],
+      "js": ["main.js"],
       "run_at": "document_idle"
     }
   ],
