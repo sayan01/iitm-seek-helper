@@ -3,10 +3,19 @@
   "name": "IITM Seek Helper",
   "description": "Extension to perform convenient modifications",
   "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
   "content_scripts": [
     {
-      "matches": ["https://seek.onlinedegree.iitm.ac.in/*"],
-      "js": ["main.js"],
+      "matches": [
+        "https://seek.onlinedegree.iitm.ac.in/*"
+      ],
+      "js": [
+        "main.js"
+      ],
       "run_at": "document_idle"
     }
   ],
