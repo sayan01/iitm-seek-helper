@@ -4,6 +4,10 @@ function clipY() {
 }
 // setInterval(clipY, 1000);
 
+/**
+  * This function makes the input number boxes of NAT assignments
+  * into text boxes to prevent accidental ±1 errors on scroll.
+  */
 function makeInputsText() {
   // make all number inputs into text
   let inputs = document.querySelectorAll("input[type=number]");
@@ -13,6 +17,9 @@ function makeInputsText() {
 }
 setInterval(makeInputsText, 1000);
 
+/**
+  * This function adds a print button to the page
+  */
 function addPrintButton() {
   submission_text = document.querySelector(".gcb-submission-due-date");
   if (!submission_text) {
@@ -43,3 +50,27 @@ function addPrintButton() {
 }
 
 setInterval(addPrintButton, 1000);
+
+/**
+  * This function removes the related videos from the youtube iframe
+  * by adding `&rel=0` to the src attribute
+  * This does not totally remove the popup anymore since 2018.
+  * To do that add the following filters to your adblocker:
+  * ```
+  * !YouTube embed pause overlay
+  * youtube.com##.ytp-pause-overlay
+  * www.youtube-nocookie.com##.ytp-pause-overlay
+  * ```
+  */
+function noReliFrame() {
+  iframe = document.querySelector("iframe");
+  if(!iframe){
+    return;
+  }
+  if(iframe.src.indexOf('rel=0') < 0){
+    iframe.src += '&rel=0';
+    console.log("Relative Videos removed");
+  }
+}
+
+setInterval(noReliFrame, 1000);
