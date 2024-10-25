@@ -1,8 +1,13 @@
-console.log("IITM Seek Helper Loaded");
+/**
+ * This function makes the page not have blank space at the bottom
+ */
 function clipY() {
-  document.querySelector(".units__container").style.overflowY = "clip";
+  let offender = document.querySelector(".custom-scrollbar-horizontal")
+  if(offender){
+    offender.style.overflowY = "clip";
+  }
 }
-// setInterval(clipY, 1000);
+setInterval(clipY, 1000);
 
 /**
   * This function makes the input number boxes of NAT assignments
@@ -74,3 +79,5 @@ function noReliFrame() {
 }
 
 setInterval(noReliFrame, 1000);
+
+console.log('iitm-seek-helper v0.6 loaded');
