@@ -7,7 +7,7 @@ function clipY() {
     offender.style.overflowY = "clip";
   }
 }
-setInterval(clipY, 1000);
+//setInterval(clipY, 1000);
 
 /**
   * This function makes the input number boxes of NAT assignments
@@ -79,5 +79,18 @@ function noReliFrame() {
 }
 
 setInterval(noReliFrame, 1000);
+
+/**
+ * This function makes the links blue and underlined
+ */
+function visibleLinks() {
+  let links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.style.color = "blue";
+    link.style.textDecoration = "underline";
+  });
+}
+
+setInterval(visibleLinks, 1000);
 
 console.log('iitm-seek-helper v0.6 loaded');
