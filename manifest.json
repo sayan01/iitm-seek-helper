@@ -14,7 +14,7 @@
         "https://seek.onlinedegree.iitm.ac.in/*"
       ],
       "js": [
-        "main.js"
+        "dist/main.js"
       ],
       "run_at": "document_idle"
     }
